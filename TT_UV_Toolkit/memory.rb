@@ -132,7 +132,7 @@ module TT::Plugins::UV_Toolkit
         e.position_material(e.material, pts_front, true)
       end
       if back_valid && pts_back.size == corners.size * 2
-        e.position_material(e.material, pts_back, false)
+        e.position_material(e.back_material, pts_back, false)
       end
     }
   end
