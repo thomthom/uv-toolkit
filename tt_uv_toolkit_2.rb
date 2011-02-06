@@ -43,7 +43,7 @@ module TT
     
   ### CONSTANTS ### --------------------------------------------------------
   
-  VERSION   = '2.2.1'.freeze
+  VERSION   = '2.2.2'.freeze
   PREF_KEY  = 'TT_UV_Toolkit2'.freeze
   TITLE     = 'UV Toolkit²'.freeze
   
@@ -57,7 +57,7 @@ module TT
   ex.copyright = 'Thomas Thomassen © 2010—2011'
   ex.creator = 'Thomas Thomassen (thomas@thomthom.net)'
   ex.description = 'Suite of UV mapping tools.'
-  Sketchup.register_extension( ex, true )
+  ::Sketchup.register_extension( ex, true )
   
     end
   end
