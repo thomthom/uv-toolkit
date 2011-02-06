@@ -5,7 +5,10 @@
 #
 # CHANGELOG
 #
-# 2.2.0 - 23.01.2011
+# 2.2.1 - 06.02.2011
+#		 * Fixed namespace issue
+#
+# 2.2.0 - 05.02.2011
 #		 * UV Memory stores backside
 #		 * UV Memory cleans up UV data
 #		 * UV Memory toolbar buttons
@@ -40,7 +43,7 @@ module TT
     
   ### CONSTANTS ### --------------------------------------------------------
   
-  VERSION   = '2.2.0'.freeze
+  VERSION   = '2.2.1'.freeze
   PREF_KEY  = 'TT_UV_Toolkit2'.freeze
   TITLE     = 'UV Toolkit²'.freeze
   
