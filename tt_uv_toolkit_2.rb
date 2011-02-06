@@ -34,7 +34,9 @@ require 'extensions.rb'
 
 #-----------------------------------------------------------------------------
 
-module TT::Plugins::UV_Toolkit
+module TT
+  module Plugins
+    module UV_Toolkit
     
   ### CONSTANTS ### --------------------------------------------------------
   
@@ -54,6 +56,8 @@ module TT::Plugins::UV_Toolkit
   ex.description = 'Suite of UV mapping tools.'
   Sketchup.register_extension( ex, true )
   
+    end
+  end
 end # module
 
 
