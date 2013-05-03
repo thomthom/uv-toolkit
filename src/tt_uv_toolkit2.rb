@@ -1,72 +1,50 @@
-#-----------------------------------------------------------------------------
-# Compatible: SketchUp 6 (PC)
-#             (other versions untested)
-#-----------------------------------------------------------------------------
-#
-# CHANGELOG
-#
-# 2.2.2 - 06.02.2011
-#		 * Fixed namespace reference issue
-#
-# 2.2.1 - 06.02.2011
-#		 * Fixed namespace issue
-#
-# 2.2.0 - 05.02.2011
-#		 * UV Memory stores backside
-#		 * UV Memory cleans up UV data
-#		 * UV Memory toolbar buttons
-#		 * UV Memory fixes
-#		 * UV Clipboard supports multiple copy
-#		 * Extension support
-#
-# 2.1.0 - 06.01.2011
-#		 * Experimental UV Memory
-#
-# 2.0.0 - 15.12.2010
-#		 * Initial release.
-#		 * UV Clipboard.
-#		 * Fit Texture Material to Quad-Face - if no material selected, use the
-#      material of the faces processed.
-#
-#-----------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 #
 # Thomas Thomassen
 # thomas[at]thomthom[dot]net
 #
-#-----------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
 require 'sketchup.rb'
 require 'extensions.rb'
 
-#-----------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
 module TT
-  module Plugins
-    module UV_Toolkit
-    
-  ### CONSTANTS ### --------------------------------------------------------
+ module Plugins
+  module UV_Toolkit
   
-  VERSION   = '2.2.2'.freeze
-  PREF_KEY  = 'TT_UV_Toolkit2'.freeze
-  TITLE     = 'UV Toolkit²'.freeze
+  ### CONSTANTS ### ------------------------------------------------------------
+  
+  # Plugin information
+  PLUGIN_ID       = 'TT_UV_Toolkit2'.freeze
+  PLUGIN_NAME     = 'UV Toolkit²'.freeze
+  PLUGIN_VERSION  = '2.3.0'.freeze
+  
+  # Resource paths
+  FILENAMESPACE = File.basename( __FILE__, '.rb' )
+  PATH_ROOT     = File.dirname( __FILE__ ).freeze
+  PATH          = File.join( PATH_ROOT, FILENAMESPACE ).freeze
   
   
-  ### EXTENSION ### --------------------------------------------------------
+  ### EXTENSION ### ------------------------------------------------------------
   
-  path = File.dirname( __FILE__ )
-  loader = File.join( path, 'TT_UV_Toolkit', 'loader.rb' )
-  ex = SketchupExtension.new( TITLE, loader )
-  ex.version = VERSION
-  ex.copyright = 'Thomas Thomassen © 2010—2011'
-  ex.creator = 'Thomas Thomassen (thomas@thomthom.net)'
-  ex.description = 'Suite of UV mapping tools.'
-  ::Sketchup.register_extension( ex, true )
-  
-    end
+  unless file_loaded?( __FILE__ )
+    loader = File.join( PATH, 'loader.rb' )
+    ex = SketchupExtension.new( PLUGIN_NAME, loader )
+    ex.description = 'Suite of UV mapping tools.'
+    ex.version     = PLUGIN_VERSION
+    ex.copyright   = 'Thomas Thomassen © 2010—2013'
+    ex.creator     = 'Thomas Thomassen (thomas@thomthom.net)'
+    Sketchup.register_extension( ex, true )
   end
-end # module
+  
+  end # module UV_Toolkit
+ end # module Plugins
+end # module TT
 
+#-------------------------------------------------------------------------------
 
-#-----------------------------------------------------------------------------
 file_loaded( __FILE__ )
-#-----------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------

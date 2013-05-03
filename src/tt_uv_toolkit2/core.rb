@@ -1,14 +1,14 @@
-#-----------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 #
 # Thomas Thomassen
 # thomas[at]thomthom[dot]net
 #
-#-----------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
 
 module TT::Plugins::UV_Toolkit
   
-  ### MENU & TOOLBARS ### --------------------------------------------------
+  ### MENU & TOOLBARS ### ------------------------------------------------------
   
   unless file_loaded?( __FILE__ )      
 		@menu.add_item('Frontface Material to Backface') {
@@ -21,7 +21,7 @@ module TT::Plugins::UV_Toolkit
   file_loaded( __FILE__ )
   
   
-  ### GENERIC TOOLS ### ----------------------------------------------------
+  ### GENERIC TOOLS ### --------------------------------------------------------
   
   
   def self.mirror_selected_materials(front_to_back=true)
@@ -60,7 +60,7 @@ module TT::Plugins::UV_Toolkit
   end
   
   
-  ### GENERAL METHODS ### --------------------------------------------------
+  ### GENERAL METHODS ### ------------------------------------------------------
     
   
   def self.valid_quad_face_selection?
@@ -69,5 +69,4 @@ module TT::Plugins::UV_Toolkit
     (sel.length > 10000 || sel.any? { |e| TT::Face.is_quad?( e ) })
   end
 
-  
 end # module
