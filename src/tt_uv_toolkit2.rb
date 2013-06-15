@@ -18,7 +18,7 @@ module TT
   
   # Plugin information
   PLUGIN_ID       = 'TT_UV_Toolkit2'.freeze
-  PLUGIN_NAME     = 'UV Toolkit²'.freeze
+  PLUGIN_NAME     = 'UV ToolkitÂ²'.freeze
   PLUGIN_VERSION  = '2.3.0'.freeze
   
   # Resource paths
@@ -34,7 +34,7 @@ module TT
     ex = SketchupExtension.new( PLUGIN_NAME, loader )
     ex.description = 'Suite of UV mapping tools.'
     ex.version     = PLUGIN_VERSION
-    ex.copyright   = 'Thomas Thomassen © 2010—2013'
+    ex.copyright   = 'Thomas Thomassen Â© 2010â€”2013'
     ex.creator     = 'Thomas Thomassen (thomas@thomthom.net)'
     Sketchup.register_extension( ex, true )
   end

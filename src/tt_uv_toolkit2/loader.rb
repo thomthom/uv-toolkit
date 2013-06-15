@@ -13,7 +13,7 @@ rescue LoadError => e
     if @lib2_update.nil?
       url = 'http://www.thomthom.net/software/sketchup/tt_lib2/errors/not-installed'
       options = {
-        :dialog_title => 'TT_Lib² Not Installed',
+        :dialog_title => 'TT_LibÂ² Not Installed',
         :scrollable => false, :resizable => false, :left => 200, :top => 200
       }
       w = UI::WebDialog.new( options )
@@ -28,7 +28,7 @@ end
 
 #-------------------------------------------------------------------------------
 
-if defined?( TT::Lib ) && TT::Lib.compatible?( '2.7.0', 'UV Toolkit²' )
+if defined?( TT::Lib ) && TT::Lib.compatible?( '2.7.0', 'UV ToolkitÂ²' )
 
 module TT::Plugins::UV_Toolkit
   
@@ -36,8 +36,8 @@ module TT::Plugins::UV_Toolkit
   ### MODULE VARIABLES ### -----------------------------------------------------
   
   unless file_loaded?( __FILE__ )
-    @menu = TT.menu('Plugins').add_submenu('UV Toolkit²')
-    @toolbar = UI::Toolbar.new( 'UV Toolkit²' )
+    @menu = TT.menu('Plugins').add_submenu('UV ToolkitÂ²')
+    @toolbar = UI::Toolbar.new( 'UV ToolkitÂ²' )
 
     require File.join( PATH, 'core.rb' )
     require File.join( PATH, 'quadface.rb' )

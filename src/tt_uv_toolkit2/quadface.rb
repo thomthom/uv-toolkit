@@ -23,13 +23,13 @@ module TT::Plugins::UV_Toolkit
       self.fit_quad_faces
     }
     @menu.add_separator
-    @menu.add_item('Rotate QF Texture Clockwise 90°') {
+    @menu.add_item('Rotate QF Texture Clockwise 90Â°') {
       self.rotate_quad(ROTATE90)
     }
-    @menu.add_item('Rotate QF Texture Counter Clockwise 90°')  {
+    @menu.add_item('Rotate QF Texture Counter Clockwise 90Â°')  {
       self.rotate_quad(ROTATE270)
     }
-    @menu.add_item('Rotate QF Texture 180°') {
+    @menu.add_item('Rotate QF Texture 180Â°') {
       self.rotate_quad(ROTATE180)
     }
   end # UI
