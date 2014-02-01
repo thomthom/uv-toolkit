@@ -21,6 +21,12 @@ module TT::Plugins::UV_Toolkit
   file_loaded( __FILE__ )
   
   
+  ### COMPATIBILITY ### --------------------------------------------------------
+
+  if defined?(Sketchup::Set)
+    Set = Sketchup::Set
+  end
+
   ### GENERIC TOOLS ### --------------------------------------------------------
   
   
